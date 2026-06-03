@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Leyka Syifa Azzahra</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelPink: '#ffd1dc',
+                        roseGold: '#b76e79',
+                        softWhite: '#fdfbfb',
+                        darkText: '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        cursive: ['Dancing Script', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-softWhite text-darkText font-sans overflow-x-hidden">
+
+    <!-- Audio Player -->
+    <!-- GANTI FILE MUSIK: Ganti src="music.mp3" dengan nama file mp3 yang Anda masukkan ke folder ini -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-toggle" class="fixed bottom-6 right-6 z-50 bg-roseGold text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-500 hover:scale-110">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <!-- Floating Hearts Container -->
+    <div id="hearts-container" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Welcome Section -->
+    <section id="welcome-section" class="min-h-screen flex flex-col items-center justify-center relative z-10 p-4 transition-opacity duration-1000">
+        <div class="text-center bg-white/60 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-pink-100 max-w-lg w-full transform transition-transform duration-700 hover:scale-105">
+            <h2 class="text-2xl md:text-3xl font-medium text-roseGold mb-2">For My Beloved Girlfriend,</h2>
+            <h1 class="font-cursive text-5xl md:text-7xl text-pink-500 mb-6 drop-shadow-sm">Leyka Syifa Azzahra</h1>
+            <p class="text-gray-600 mb-8">There's something special for you today...</p>
+            <button id="open-gift-btn" class="bg-gradient-to-r from-pink-400 to-roseGold text-white px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-pink-300/50 hover:scale-105 transition-all duration-300 active:scale-95 flex items-center justify-center mx-auto gap-2">
+                <i class="fas fa-gift"></i> Open 
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden Initially) -->
+    <main id="main-content" class="hidden relative z-10">
+        
+        <!-- Greeting Section -->
+        <section class="min-h-screen flex flex-col items-center justify-center p-6 text-center fade-in-section">
+            <h1 class="font-cursive text-6xl md:text-8xl text-pink-500 mb-4">Happy Birthday!</h1>
+            <h2 class="text-2xl md:text-4xl text-roseGold font-light mb-8">My Princess, Leyka</h2>
+            <div class="w-24 h-1 bg-pink-300 mx-auto rounded-full mb-8"></div>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl leading-relaxed">
+                Today is the most special day because on this day, the most beautiful angel descended to earth. I am very grateful to be able to celebrate your happiness with you.
+            </p>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="py-20 px-6 bg-gradient-to-b from-transparent to-pink-50/50 fade-in-section">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="font-cursive text-5xl text-center text-roseGold mb-12">Our Memories</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                    <!-- GANTI FOTO: Ganti src="foto1.jpg" dengan nama foto Anda -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[3/4] relative group">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=600&auto=format&fit=crop" alt="Kenangan 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <!-- Foto 2 -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-[3/4] relative group">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600&auto=format&fit=crop" alt="Kenangan 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <!-- Foto 3 -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-square md:aspect-[3/4] relative group">
+                        <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?q=80&w=600&auto=format&fit=crop" alt="Kenangan 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <!-- Foto 4 -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md cursor-pointer aspect-square md:aspect-[3/4] relative group">
+                        <img src="https://images.unsplash.com/photo-1518599904199-0ca897819ddb?q=80&w=600&auto=format&fit=crop" alt="Kenangan 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-400 mt-6 italic">*Klik foto untuk memperbesar (Panduan mengganti foto ada di file PANDUAN_KUSTOMISASI)</p>
+            </div>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section class="min-h-screen flex items-center justify-center py-20 px-4 fade-in-section">
+            <div class="max-w-3xl w-full bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border-t-4 border-pink-400 relative">
+                <i class="fas fa-quote-left text-4xl text-pink-200 absolute top-6 left-6"></i>
+                <h2 class="font-cursive text-4xl md:text-5xl text-roseGold mb-8 text-center mt-4">Surat Untukmu</h2>
+                
+                <!-- GANTI TEKS: Ubah isi surat di bawah ini -->
+                <div id="typewriter-container" class="text-gray-700 leading-relaxed text-lg md:text-xl min-h-[200px]">
+                    <span id="typewriter-text"></span><span class="cursor animate-pulse">|</span>
+                </div>
+                
+                <!-- Teks Asli (Disembunyikan, dibaca oleh JS) -->
+                <div id="letter-content" class="hidden">
+                    blablablabla. . ❤️
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="py-20 px-4 fade-in-section bg-white/30">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="font-cursive text-5xl text-center text-roseGold mb-16">Our Stories belum edit</h2>
+                <div class="relative border-l-2 border-pink-300 ml-4 md:ml-1/2 space-y-12 pb-8">
+                    
+                    <!-- GANTI TIMELINE: Ubah teks dan tanggal di bawah ini -->
+                    <!-- Item 1 -->
+                    <div class="relative pl-8 timeline-item fade-in-section">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-pink-400 rounded-full border-4 border-softWhite shadow-sm"></div>
+                        <h3 class="text-xl font-semibold text-roseGold">Pertama Kali Kenalan</h3>
+                        <p class="text-sm text-pink-500 font-medium mb-2">12 Januari 2023</p>
+                        <p class="text-gray-600 bg-white/60 p-4 rounded-xl shadow-sm">Hari dimana semuanya dimulai. Senyum pertamamu waktu itu nggak pernah bisa aku lupain.</p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative pl-8 timeline-item fade-in-section delay-100">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-pink-400 rounded-full border-4 border-softWhite shadow-sm"></div>
+                        <h3 class="text-xl font-semibold text-roseGold">Jalan Berdua Pertama</h3>
+                        <p class="text-sm text-pink-500 font-medium mb-2">14 Februari 2023</p>
+                        <p class="text-gray-600 bg-white/60 p-4 rounded-xl shadow-sm">Deg-degan banget, tapi bahagia bisa ngabisin waktu seharian sama kamu.</p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative pl-8 timeline-item fade-in-section delay-200">
+                        <div class="absolute -left-3 top-0 w-6 h-6 bg-pink-400 rounded-full border-4 border-softWhite shadow-sm"></div>
+                        <h3 class="text-xl font-semibold text-roseGold">Hari Jadian Kita</h3>
+                        <p class="text-sm text-pink-500 font-medium mb-2">20 Maret 2023</p>
+                        <p class="text-gray-600 bg-white/60 p-4 rounded-xl shadow-sm">Momen paling bersejarah. Hari dimana kamu bilang 'iya'.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Age Celebration Section -->
+        <section id="age-section" class="min-h-screen flex flex-col items-center justify-center p-4 text-center fade-in-section relative">
+            <h2 class="text-3xl text-gray-500 mb-4">Selamat datang di usia</h2>
+            <div class="relative">
+                <h1 class="text-[12rem] leading-none font-bold text-transparent bg-clip-text bg-gradient-to-b from-pink-400 to-roseGold drop-shadow-xl z-10">19</h1>
+                <h1 class="text-[12rem] leading-none font-bold text-pink-200/50 absolute top-4 left-4 -z-10 blur-sm">19</h1>
+            </div>
+            <p class="text-2xl mt-4 font-cursive text-roseGold">Tahun</p>
+            <p class="mt-8 text-gray-600 max-w-lg">Satu tahun lebih dewasa, satu tahun lebih cantik, dan semoga satu tahun ini penuh dengan berkah luar biasa untukmu.</p>
+        </section>
+
+        <!-- Closing Section -->
+        <section class="min-h-screen flex flex-col items-center justify-center p-4 text-center fade-in-section relative overflow-hidden">
+            <div class="max-w-2xl bg-white/50 backdrop-blur-md p-10 rounded-3xl shadow-xl border border-pink-200 z-10">
+                <h2 class="font-cursive text-5xl text-pink-500 mb-6">Sekali Lagi...</h2>
+                <h3 class="text-2xl font-medium text-gray-700 mb-8">Selamat Ulang Tahun, Leyka sayang! 🎂🎉</h3>
+                <p class="text-gray-600 mb-10">Semoga hari ini jadi salah satu hari terbaik dalam hidupmu. Terima kasih sudah jadi pacar yang luar biasa.</p>
+                
+                <button id="love-btn" class="bg-gradient-to-r from-roseGold to-pink-500 text-white px-10 py-4 rounded-full font-bold text-xl shadow-xl shadow-pink-300/50 hover:scale-110 transition-all duration-300 active:scale-95 flex items-center justify-center mx-auto gap-3">
+                    <i class="fas fa-heart animate-pulse"></i> I Love You
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 z-[100] hidden flex items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-sm">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white text-4xl hover:text-pink-400 transition-colors">&times;</button>
+        <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl transform scale-95 transition-transform duration-300">
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
