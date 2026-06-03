@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }));
         }, 250);
         
-        loveBtn.innerHTML = "<i class='fas fa-heart text-white'></i> Love You Too!";
+        loveBtn.innerHTML = "<i class='fas fa-heart text-white'></i> LOVE YOUU MOREE!";
         loveBtn.classList.add('bg-pink-600');
     });
 
